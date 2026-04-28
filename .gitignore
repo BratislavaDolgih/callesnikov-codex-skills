@@ -1,0 +1,9 @@
+# Codex bundled/system skills
+.system/
+
+# Local skill excluded from this repo
+youtube-downloader/
+
+# Python cache artifacts
+__pycache__/
+*.pyc
