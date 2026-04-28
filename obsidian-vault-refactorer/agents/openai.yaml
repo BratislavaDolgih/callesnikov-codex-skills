@@ -1,0 +1,7 @@
+interface:
+  display_name: "Obsidian Vault Refactorer"
+  short_description: "Careful Obsidian vault refactors."
+  default_prompt: "Use $obsidian-vault-refactorer to inspect and carefully refactor a local Obsidian vault while preserving structure, links, embeds, frontmatter, encoding, and Markdown consistency."
+
+policy:
+  allow_implicit_invocation: true
