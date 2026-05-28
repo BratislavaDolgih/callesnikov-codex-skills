@@ -7,7 +7,8 @@ from pathlib import Path
 
 
 def find_whisper_binary(root):
-    names = ["whisper-cli.exe", "main.exe", "whisper-cli", "main"]
+    local_names = ["whisper-cli.exe", "main.exe", "whisper-cli", "main"]
+    path_names = ["whisper-cli.exe", "whisper-cli", "main.exe"]
     search_roots = [
         root / "runtime" / "whisper.cpp",
         root / "runtime" / "whisper.cpp" / "build",
@@ -16,11 +17,11 @@ def find_whisper_binary(root):
     for search_root in search_roots:
         if not search_root.exists():
             continue
-        for name in names:
+        for name in local_names:
             matches = list(search_root.rglob(name))
             if matches:
                 return matches[0]
-    for name in names:
+    for name in path_names:
         found = shutil.which(name)
         if found:
             return Path(found)

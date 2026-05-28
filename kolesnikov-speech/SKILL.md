@@ -11,13 +11,46 @@ Only perform the stage the user asked for. Do not advance to later stages unless
 
 ## Core Rules
 
-- Keep runtime assets self-contained in this skill directory.
-- Prefer the model already installed at `runtime/whisper.cpp/models/ggml-large-v3-turbo.bin`.
+- Keep every runtime asset self-contained in this skill directory: `C:\Users\User333\.codex\skills\kolesnikov-speech`.
+- Put `whisper.cpp`, build outputs, model files, helper downloads, temporary files, and generated skill-owned metadata under this skill folder only. Do not install models or binaries globally.
+- Prefer the model at `runtime/whisper.cpp/models/ggml-large-v3-turbo.bin` when it exists.
 - Use official sources when checking freshness or downloading runtime assets:
-  `https://github.com/ggml-org/whisper.cpp` for runtime and official OpenAI Whisper references for model information.
+  `https://github.com/ggml-org/whisper.cpp` for runtime, `https://huggingface.co/ggerganov/whisper.cpp/tree/main` for pre-converted GGML model files, and official OpenAI Whisper references for model lineage.
 - If a needed codec, audio format dependency, or system package is outside the bundled skill runtime, ask the user where to install or download it.
 - Work in the current task directory for audio chunks and transcript outputs.
 - Use the scripts in `scripts/` for repeatable stages when possible.
+- Treat `runtime/whisper.cpp/models/` as the only model directory unless the user explicitly provides another model path for a one-off run.
+- Never accept a generic `main` executable from PATH on Windows; use a local `whisper-cli.exe`, local `main.exe`, or an explicit user-provided binary path.
+
+## Runtime And Model Sources
+
+Expected local layout:
+
+```text
+C:\Users\User333\.codex\skills\kolesnikov-speech\
+  runtime\
+    whisper.cpp\
+      build\
+      models\
+        ggml-large-v3-turbo.bin
+```
+
+Use these upstream sources when bootstrapping or updating:
+
+- Runtime repository: `https://github.com/ggml-org/whisper.cpp`
+- GGML model repository: `https://huggingface.co/ggerganov/whisper.cpp/tree/main`
+- Default model file: `ggml-large-v3-turbo.bin`
+- whisper.cpp model downloader after cloning/building: `runtime\whisper.cpp\models\download-ggml-model.cmd large-v3-turbo`
+
+When assets are missing, explain the missing pieces and offer a local skill-folder bootstrap. Do not download the large model or clone/build whisper.cpp unless the user explicitly asks.
+
+Bootstrap command, only after explicit user approval:
+
+```powershell
+C:\Users\User333\.codex\skills\kolesnikov-speech\scripts\bootstrap_whisper_cpp.ps1 -Model large-v3-turbo
+```
+
+This script clones/updates `whisper.cpp`, builds it with CMake, downloads the selected GGML model, and then runs preflight. It writes only under `C:\Users\User333\.codex\skills\kolesnikov-speech\runtime`.
 
 ## Stage 0: Bootstrap And Preflight
 
@@ -27,9 +60,9 @@ On the first user message in the current chat, run one preflight for local tooli
 python "C:\Users\User333\.codex\skills\kolesnikov-speech\scripts\preflight.py"
 ```
 
-Check `ffmpeg`, `python`, `cmake`, a runnable `whisper.cpp` binary, and at least one usable `ggml` model under `runtime/whisper.cpp/models/`.
+Check `ffmpeg`, `python`, `cmake`, a runnable local `whisper.cpp` binary, and at least one usable `ggml` model under `runtime/whisper.cpp/models/`.
 
-If files are missing, explain that downloads and builds should be placed inside this skill folder. Arrange missing helper scripts or runtime assets so the user can start the next stage with a simple command, but do not start transcription until explicitly asked.
+If files are missing, explain exactly what is absent. Downloads and builds must be placed inside this skill folder. Do not start transcription until the user explicitly asks.
 
 ## Stage 1: Split Source Audio
 
@@ -61,7 +94,7 @@ Transcribe prepared chunks from `splitted_records`, not the original long record
 python "C:\Users\User333\.codex\skills\kolesnikov-speech\scripts\transcribe_chunks.py"
 ```
 
-Use the model requested by the user, or default to `runtime/whisper.cpp/models/ggml-large-v3-turbo.bin`. Save `json`, `srt`, and `txt` artifacts for every processed chunk into `transferred`.
+Use the model requested by the user, or default to `runtime/whisper.cpp/models/ggml-large-v3-turbo.bin`. If that model is missing, stop and request permission to bootstrap/download it into the skill folder. Save `json`, `srt`, and `txt` artifacts for every processed chunk into `transferred`.
 
 After success, tell the user each chunk was converted and the results are in `transferred`.
 

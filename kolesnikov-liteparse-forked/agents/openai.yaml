@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kolesnikov Liteparse Forked"
+  short_description: "Kolesnikov local PDF parsing runtime"
+  default_prompt: "Use $kolesnikov-liteparse-forked to parse this PDF locally and save clean text, JSON, or screenshots."
