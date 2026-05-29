@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:111827,50:2563eb,100:22c55e&text=Kolesnikov%20Codex%20Skills&fontColor=ffffff&fontSize=42&fontAlignY=38&desc=Local-first%20workflows%20for%20Codex&descAlignY=58&descSize=18" alt="Kolesnikov Codex Skills">
+  <img src="./assets/header.png" alt="Kolesnikov Codex Skills" width="100%">
 </p>
 
 <p align="center">
