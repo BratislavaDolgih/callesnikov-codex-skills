@@ -1,4 +1,0 @@
-interface:
-  display_name: "Kolesnikov Transitions Variations"
-  short_description: "Frontend transition ideas and motion picks"
-  default_prompt: "Use $kolesnikov-transitions to pick a tasteful frontend transition pattern for this UI."

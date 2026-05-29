@@ -1,0 +1,7 @@
+interface:
+  display_name: "Callesnikov Obsidian Refactorer"
+  short_description: "Careful Callesnikov Obsidian vault refactors"
+  default_prompt: "Use $callesnikov-obsidian-refactorer to inspect and carefully refactor a local Obsidian vault while preserving structure, links, embeds, frontmatter, encoding, and Markdown consistency."
+
+policy:
+  allow_implicit_invocation: true

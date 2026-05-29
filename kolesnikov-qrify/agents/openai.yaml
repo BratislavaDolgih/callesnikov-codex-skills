@@ -1,4 +1,0 @@
-interface:
-  display_name: "Kolesnikov QRify"
-  short_description: "Generate styled QR codes locally"
-  default_prompt: "Use $kolesnikov-qrify to generate a styled QR code in the current directory."

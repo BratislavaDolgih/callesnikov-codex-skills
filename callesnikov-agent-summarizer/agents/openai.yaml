@@ -1,0 +1,4 @@
+interface:
+  display_name: "Callesnikov Agent-Runtime Summarizer"
+  short_description: "End-of-dialog Codex usage audit"
+  default_prompt: "Use $callesnikov-agent-summarizer to close this dialogue with a blunt runtime audit and reusable-skill recommendations."

@@ -1,4 +1,0 @@
-interface:
-  display_name: "Kolesnikov Youtube Preserver"
-  short_description: "Preserve YouTube video, audio, metadata"
-  default_prompt: "Use $kolesnikov-youtube-preserver to save this YouTube link as video or audio with safe local outputs."

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/header.png" alt="Kolesnikov Codex Skills" width="100%">
+  <img src="./assets/header.png" alt="Callesnikov Codex Skills" width="100%">
 </p>
 
 <p align="center">
@@ -8,7 +8,7 @@
   <a href="#skills"><img src="https://img.shields.io/badge/README-GitHub--ready-111827?style=for-the-badge" alt="GitHub ready"></a>
 </p>
 
-<h1 align="center">🪄 Kolesnikov Codex Skills 💿</h1>
+<h1 align="center">🪄 Callesnikov Codex Skills 💿</h1>
 
 <p align="center">
   Персональное ассорти навыков Codex: разработанные и дополненные рабочие сценарии,
@@ -19,7 +19,7 @@
 
 ## Что Внутри
 
-Это витрина для навыков Codex, которые начинаются с `kolesnikov-*`.
+Это витрина для навыков Codex, которые начинаются с `callesnikov-*`.
 Каждый навык сделан под конкретный повторяемый сценарий: разобрать документ,
 защитить Obsidian-граф, подготовить транскрибацию, сохранить YouTube-материал,
 подобрать аккуратное движение в интерфейсе или закрыть длинную сессию без потери полезной памяти.
@@ -37,13 +37,13 @@
 
 | Навык | Зачем нужен | Что делает |
 |---|---|---|
-| [`kolesnikov-agent-summarizer`](https://github.com/BratislavaDolgih/kolesnikov-codex-skills/tree/main/kolesnikov-agent-summarizer) | Финальный аудит диалога | Проверяет сессию перед закрытием, архивированием, удалением или компакцией. Ищет анти-паттерны в промптах, инструментах и управлении контекстом, сохраняет полезную операционную память, предлагает кандидатов в новые навыки и пишет жесткий handoff для следующего чата. |
-| [`kolesnikov-liteparse-forked`](https://github.com/BratislavaDolgih/kolesnikov-codex-skills/tree/main/kolesnikov-liteparse-forked) | Локальный парсинг документов | Работает с PDF и другими документами через LiteParse. Извлекает текст, JSON со структурой, bounding boxes, OCR, выбранные страницы, скриншоты страниц и batch-результаты, при этом не трогает исходные файлы. |
-| [`kolesnikov-obsidian-refactorer`](https://github.com/BratislavaDolgih/kolesnikov-codex-skills/tree/main/kolesnikov-obsidian-refactorer) | Безопасная работа с Obsidian | Аккуратно обслуживает Obsidian vault и Markdown-базу: аудит заметок, ремонт wiki-links и embeds, сохранение алиасов, headings, frontmatter, безопасные переименования, красивый рефактор заметок и экспорт Markdown/Obsidian в PDF. |
-| [`kolesnikov-qrify`](https://github.com/BratislavaDolgih/kolesnikov-codex-skills/tree/main/kolesnikov-qrify) | Генерация QR-кодов | Создает scan-safe QR-коды в PNG или SVG: ссылки, текст, Wi-Fi, vCard, календарные payload, batch-режим, брендовые цвета, градиенты и Windows-safe имена файлов. Держит вывод в текущей рабочей папке, а не внутри навыка. |
-| [`kolesnikov-speech`](https://github.com/BratislavaDolgih/kolesnikov-codex-skills/tree/main/kolesnikov-speech) | Локальная транскрибация длинного аудио | Ведет пошаговый пайплайн `ffmpeg` + `whisper.cpp`: preflight, нарезка аудио на чанки, подготовка папок, транскрибация чанков и склейка текстов. Все runtime-активы держит внутри папки навыка. |
-| [`kolesnikov-transitions`](https://github.com/BratislavaDolgih/kolesnikov-codex-skills/tree/main/kolesnikov-transitions) | Справочник аккуратных UI-переходов | Помогает выбирать motion для интерфейсов: dropdown, modal, panel reveal, смена чисел, badges, success/error-состояния, icon swap и переходы между страницами. Держит стиль практичным, быстрым и совместимым с `prefers-reduced-motion`. |
-| [`kolesnikov-youtube-preserver`](https://github.com/BratislavaDolgih/kolesnikov-codex-skills/tree/main/kolesnikov-youtube-preserver) | Сохранение YouTube-видео и аудио | Скачивает YouTube-материалы через обертку над `yt-dlp`. Поддерживает качество, аудиоформаты, thumbnail, subtitles, metadata JSON, opt-in для playlist, retries и Windows-safe имена файлов. |
+| [`callesnikov-agent-summarizer`](https://github.com/BratislavaDolgih/callesnikov-codex-skills/tree/main/callesnikov-agent-summarizer) | Финальный аудит диалога | Проверяет сессию перед закрытием, архивированием, удалением или компакцией. Ищет анти-паттерны в промптах, инструментах и управлении контекстом, сохраняет полезную операционную память, предлагает кандидатов в новые навыки и пишет жесткий handoff для следующего чата. |
+| [`callesnikov-liteparse-forked`](https://github.com/BratislavaDolgih/callesnikov-codex-skills/tree/main/callesnikov-liteparse-forked) | Локальный парсинг документов | Работает с PDF и другими документами через LiteParse. Извлекает текст, JSON со структурой, bounding boxes, OCR, выбранные страницы, скриншоты страниц и batch-результаты, при этом не трогает исходные файлы. |
+| [`callesnikov-obsidian-refactorer`](https://github.com/BratislavaDolgih/callesnikov-codex-skills/tree/main/callesnikov-obsidian-refactorer) | Безопасная работа с Obsidian | Аккуратно обслуживает Obsidian vault и Markdown-базу: аудит заметок, ремонт wiki-links и embeds, сохранение алиасов, headings, frontmatter, безопасные переименования, красивый рефактор заметок и экспорт Markdown/Obsidian в PDF. |
+| [`callesnikov-qrify`](https://github.com/BratislavaDolgih/callesnikov-codex-skills/tree/main/callesnikov-qrify) | Генерация QR-кодов | Создает scan-safe QR-коды в PNG или SVG: ссылки, текст, Wi-Fi, vCard, календарные payload, batch-режим, брендовые цвета, градиенты и Windows-safe имена файлов. Держит вывод в текущей рабочей папке, а не внутри навыка. |
+| [`callesnikov-speech`](https://github.com/BratislavaDolgih/callesnikov-codex-skills/tree/main/callesnikov-speech) | Локальная транскрибация длинного аудио | Ведет пошаговый пайплайн `ffmpeg` + `whisper.cpp`: preflight, нарезка аудио на чанки, подготовка папок, транскрибация чанков и склейка текстов. Все runtime-активы держит внутри папки навыка. |
+| [`callesnikov-transitions`](https://github.com/BratislavaDolgih/callesnikov-codex-skills/tree/main/callesnikov-transitions) | Справочник аккуратных UI-переходов | Помогает выбирать motion для интерфейсов: dropdown, modal, panel reveal, смена чисел, badges, success/error-состояния, icon swap и переходы между страницами. Держит стиль практичным, быстрым и совместимым с `prefers-reduced-motion`. |
+| [`callesnikov-youtube-preserver`](https://github.com/BratislavaDolgih/callesnikov-codex-skills/tree/main/callesnikov-youtube-preserver) | Сохранение YouTube-видео и аудио | Скачивает YouTube-материалы через обертку над `yt-dlp`. Поддерживает качество, аудиоформаты, thumbnail, subtitles, metadata JSON, opt-in для playlist, retries и Windows-safe имена файлов. |
 
 <a id="principles"></a>
 
@@ -59,30 +59,30 @@
 
 ```text
 skills/
-  kolesnikov-agent-summarizer/
+  callesnikov-agent-summarizer/
     SKILL.md
     references/
-  kolesnikov-liteparse-forked/
+  callesnikov-liteparse-forked/
     SKILL.md
     scripts/
     references/
     tools/
-  kolesnikov-obsidian-refactorer/
+  callesnikov-obsidian-refactorer/
     SKILL.md
     scripts/
     references/
-  kolesnikov-qrify/
+  callesnikov-qrify/
     SKILL.md
     agents/
     scripts/
     tools/
-  kolesnikov-speech/
+  callesnikov-speech/
     SKILL.md
     scripts/
     runtime/
-  kolesnikov-transitions/
+  callesnikov-transitions/
     SKILL.md
-  kolesnikov-youtube-preserver/
+  callesnikov-youtube-preserver/
     SKILL.md
     scripts/
 ```

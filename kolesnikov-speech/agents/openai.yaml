@@ -1,4 +1,0 @@
-interface:
-  display_name: "Kolesnikov Speech"
-  short_description: "Prepare local ffmpeg and whisper.cpp speech-to-text workflows."
-  default_prompt: "Use $kolesnikov-speech to prepare, split, transcribe, and merge long local audio with ffmpeg and whisper.cpp."
