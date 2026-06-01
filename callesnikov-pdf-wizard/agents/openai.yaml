@@ -1,0 +1,4 @@
+interface:
+  display_name: "Callesnikov PDF Wizard"
+  short_description: "Local PDF surgery with pypdf"
+  default_prompt: "Use $callesnikov-pdf-wizard to split, merge, replace, rotate, stamp, encrypt, or inspect PDF files locally."
