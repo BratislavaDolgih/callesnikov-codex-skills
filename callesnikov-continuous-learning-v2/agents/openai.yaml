@@ -1,0 +1,7 @@
+interface:
+  display_name: "Callesnikov Continuous Learning v2"
+  short_description: "Build evidence-backed local Codex instincts"
+  default_prompt: "Use $callesnikov-continuous-learning-v2 to extract a durable, evidence-backed instinct from this accepted workflow."
+
+policy:
+  allow_implicit_invocation: true

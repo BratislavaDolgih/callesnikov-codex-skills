@@ -1,0 +1,7 @@
+interface:
+  display_name: "Callesnikov Design Checklist"
+  short_description: "Design apps with focused UX checklists"
+  default_prompt: "Use $callesnikov-design-checklist to review this app screen or flow and turn relevant UX findings into prioritized acceptance criteria."
+
+policy:
+  allow_implicit_invocation: true

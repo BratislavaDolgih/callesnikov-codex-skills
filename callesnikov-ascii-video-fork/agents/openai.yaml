@@ -1,0 +1,7 @@
+interface:
+  display_name: "Callesnikov ASCII Video Fork"
+  short_description: "ASCII video and image terminal tools"
+  default_prompt: "Use $callesnikov-ascii-video-fork to convert or preview a video or image as ASCII art."
+
+policy:
+  allow_implicit_invocation: true

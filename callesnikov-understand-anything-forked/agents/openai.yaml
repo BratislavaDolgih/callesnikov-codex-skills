@@ -1,0 +1,6 @@
+interface:
+  display_name: "Callesnikov-Understand-Anything-Forked"
+  short_description: "Analyze codebases, graphs, and evidence"
+  default_prompt: "Use $callesnikov-understand-anything-forked to analyze this codebase and build a knowledge graph."
+policy:
+  allow_implicit_invocation: true

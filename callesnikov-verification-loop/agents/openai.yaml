@@ -1,0 +1,7 @@
+interface:
+  display_name: "Callesnikov Verification Loop"
+  short_description: "Prove code changes with repository quality gates"
+  default_prompt: "Use $callesnikov-verification-loop to verify this change with the repository's real build, test, lint, and runtime gates."
+
+policy:
+  allow_implicit_invocation: true
